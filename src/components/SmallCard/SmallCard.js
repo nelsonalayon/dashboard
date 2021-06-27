@@ -68,8 +68,9 @@ const SmallCard = (props) => {
               <Percentaje2 info={obj}> {Math.abs(obj.percentage_likes)}</Percentaje2>
             </PercentajeContainer>
           </div>
+          <Modal isOpen = {openModal} data = {obj} photo = {obj} isDark={props.isDark}/>
         </SmallContainer>
-        <Modal isOpen = {openModal} data = {obj} photo = {obj} isDark={props.isDark}/>
+        
       </Fragment>
     );
   });

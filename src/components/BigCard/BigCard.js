@@ -7,7 +7,7 @@ import youtube from "../../assets/icon-youtube.svg";
 import twitter from "../../assets/icon-twitter.svg";
 import up from "../../assets/icon-up.svg";
 import down from "../../assets/icon-down.svg";
-import Modal from "../modal/Modal"
+import Modal from "../modal/Modal";
 
 const BigCard = (props) => {
   const [photos] = useState({
@@ -19,19 +19,23 @@ const BigCard = (props) => {
     6: down,
   });
 
-  const  [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const toggleOpenModal = () => {
-    openModal === false ? setOpenModal(true) : setOpenModal(false)
-  }
+    openModal === false ? setOpenModal(true) : setOpenModal(false);
+  };
 
   return props.data.social_media_dashboard.social_media.map((big) => {
     return (
-      
-      <Container info={big} key={big.id} isDark={props.isDark} onClick={()=>toggleOpenModal()}>
+      <Container
+        info={big}
+        key={big.id}
+        isDark={props.isDark}
+        onClick={() => toggleOpenModal()}
+      >
         <User>
           <img src={photos[big.media]} alt={big.media} /> <h4>{big.user}</h4>
-        </User>        
+        </User>
         <Followers>
           <h1>{big.followers}</h1>
           <h4>{big.key_followers}</h4>
@@ -41,9 +45,8 @@ const BigCard = (props) => {
           <h4>{Math.abs(big.today)} today</h4>
         </Today>
 
-        <Modal isOpen = {openModal} data = {big} isDark={props.isDark}/>
+        <Modal isOpen={openModal} data={big} isDark={props.isDark} />
       </Container>
-      
     );
   });
 };

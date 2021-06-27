@@ -19,6 +19,10 @@ background: azure;
   flex-direction: column;
   background-color: ${props => props.isDark ? "var(--background-card-dark);" : "var(--background-card-white);" } ;
   padding: 90px 110px;
+  width: 75%;
+  & h3 {
+    color: ${props => props.isDark ? "var(--text-white-dark);" : "var(--text-white-white);" } ;
+  }
 
 `
 
@@ -38,6 +42,7 @@ align-items:center;
 
 export const Resume = styled.div`
 display:flex;
+flex-wrap:wrap;
 & div {
   display:flex;
   justify-content:center;
