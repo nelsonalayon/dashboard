@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SmallContainer = styled.article`
+export const SmallContainer = styled.button`
     display:flex;  
     padding: 28px 0;     
     justify-content:space-around;
@@ -9,6 +9,7 @@ export const SmallContainer = styled.article`
     border-radius: 3px;    
     width: 260px;
     margin:15px; 
+    border:none;
     transition:1s;
     & h2 {
         margin: 0;
@@ -27,6 +28,11 @@ export const SmallContainer = styled.article`
 
 export const Percentaje = styled.h4`
 color: ${props => props.info.today > 0 ? "var(--lime-green)" : "var(--bright-Red)" };
+
+`
+
+export const Percentaje2 = styled.h4`
+color: ${props => props.info.percentage_likes > 0 ? "var(--lime-green)" : "var(--bright-Red)" };
 
 `
 

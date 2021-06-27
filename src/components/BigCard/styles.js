@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.article`
+export const Container = styled.button`
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -12,6 +12,7 @@ export const Container = styled.article`
     margin:15px;
     padding: 20px 0;
     transition:1s;
+    border:none;
 
     &:hover {
         background-color: ${props => props.isDark ? "var(--top-background-dark);" : "var(--top-background-white);" } ;

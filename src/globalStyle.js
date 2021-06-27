@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
         --facebook: hsl(195, 100%, 50%);
         --twitter: hsl(203, 89%, 53%);
-        --instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+        --instagram:linear-gradient(hsl(37, 97%, 70%),hsl(329, 70%, 58%));
         --youTube: hsl(348, 97%, 39%);
 
         //   Dark Theme

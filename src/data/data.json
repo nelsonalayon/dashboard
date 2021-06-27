@@ -2,65 +2,70 @@
   "social_media_dashboard": {
     "total_followers": "23,004",
     "social_media": [
-      {
+      { 
+        "name": "Facebook",
         "id": "0",
         "media": 1,
         "color": "var(--facebook)",
         "user": "@nathanf",
         "followers": "1987",
+        "key_followers":"FOLLOWERS",
         "today": 12,
         "keys": "Page Views",
-        "number": 87,
-        "media_key": "Percentage Views",
-        "media_key_value": 3,
+        "number_media_key": 87,
+        "media_key": "Page Views",        
+        "media_key_value": 3,       
         "likes": 52,
         "percentage_likes": -2
       },
 
       {
+        "name": "Twitter",
         "id": "1",
         "media": 2,
         "color": "var(--twitter)",
         "user": "@nathanf",
         "followers": "1044",
+        "key_followers":"FOLLOWERS",
         "today": 99,
         "keys": "Retweets",
-
-        "number": 117,
-        "media_key": "Likes",
-        "media_key_value": 507,
+        "number_media_key": 117,
+        "media_key": "Retweets",        
+        "media_key_value": 303,        
         "likes": 507,
         "percentage_likes": 553
       },
       {
+        "name": "Instagram",
         "id": "2",
         "media": 3,
         "color": "var(--instagram)",
         "user": "@realnathanf",
         "followers": "11k",
+        "key_followers":"FOLLOWERS",
         "today": 1099,
         "keys": "Likes",
-
-        "number": 5462,
-        "media_key": "Profile Views",
-        "media_key_value": "52k",
-        "likes": 5462,
-        "percentage_likes": 2257
+        "number_media_key": 5462,
+        "media_key": "Likes",        
+        "media_key_value": 2257,        
+        "likes": "52k",
+        "percentage_likes": 1375
       },
       {
+        "name": "Youtube",
         "id": "3",
         "media": 4,
         "color": "var(--youTube)",
         "user": "Nathan F.",
         "followers": "8239",
-        "today": -144,
+        "key_followers":"SUSCRIBERS",
+        "today": -144,        
         "keys": "Likes",
-
-        "number": 107,
-        "media_key": "Total Views",
-        "media_key_value": 1407,
-        "likes": 107,
-        "percentage_likes": -19
+        "number_media_key": 107,
+        "media_key": "Likes",        
+        "media_key_value": -19,
+        "likes": 1407,
+        "percentage_likes": -12
       }
     ]
   }
