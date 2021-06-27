@@ -5,12 +5,17 @@ export const Container = styled.article`
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background: var(--background-card-dark);
+    background-color: ${props => props.isDark ? "var(--background-card-dark);" : "var(--background-card-white);" } ;
     border-radius: 3px;
     box-shadow: inset 0em 5px ${props => props.info.color};
     width: 260px;
     margin:15px;
     padding: 20px 0;
+    transition:1s;
+
+    &:hover {
+        background-color: ${props => props.isDark ? "var(--top-background-dark);" : "var(--top-background-white);" } ;
+    }
 `
 
 export const User = styled.div`

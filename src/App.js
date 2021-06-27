@@ -1,23 +1,35 @@
 import BigCard from "./components/BigCard/BigCard";
 import SmallCard from "./components/SmallCard/SmallCard";
 import data from "./data/data.json";
-import { HeaderContainer } from  "./styleapp"
+import { SectionContainer, AppContainer, AppTitle } from "./styleapp";
+import { useState } from "react";
 
 import GlobalStyle from "./globalStyle";
 
 function App() {
+  const [darkScreen, setDarkScreen] = useState(false);
+
+  const toggleColors = () => {
+    darkScreen === true ? setDarkScreen(false): setDarkScreen(true)
+  }
   return (
-    <>
-      <GlobalStyle />
-      <HeaderContainer >
-        <BigCard data={data} />
-      </HeaderContainer>
-      <section>
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((small) => {
-          return <SmallCard />;
-        })}
-      </section>
-    </>
+    <AppContainer>
+      <GlobalStyle isDark={darkScreen} />
+      <AppTitle isDark={darkScreen}>
+        <h2>Social Media Dashboard</h2>
+        <h4>Total followers: {data.social_media_dashboard.total_followers}</h4>
+        <button onClick ={() => toggleColors() }> cambiame</button>
+      </AppTitle>
+      <SectionContainer>
+        <BigCard data={data} isDark={darkScreen} />
+      </SectionContainer>
+      <AppTitle>
+        <h2>Overview - Today</h2>        
+      </AppTitle>
+      <SectionContainer>
+        <SmallCard data={data} isDark={darkScreen} />
+      </SectionContainer>
+    </AppContainer>
   );
 }
 

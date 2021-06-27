@@ -2,17 +2,19 @@
   "social_media_dashboard": {
     "total_followers": "23,004",
     "social_media": [
-      { 
+      {
         "id": "0",
         "media": 1,
         "color": "var(--facebook)",
         "user": "@nathanf",
         "followers": "1987",
         "today": 12,
-        "page_views": [
-          { "number": 87, "percentage": 3 },
-          { "likes": 52, "percentage": -2 }
-        ]
+        "keys": "Page Views",
+        "number": 87,
+        "media_key": "Percentage Views",
+        "media_key_value": 3,
+        "likes": 52,
+        "percentage_likes": -2
       },
 
       {
@@ -22,10 +24,13 @@
         "user": "@nathanf",
         "followers": "1044",
         "today": 99,
-        "retweets": [
-            { "number": 117, "percentage": 303 },
-            { "likes": 507, "percentage": 553 }
-          ]
+        "keys": "Retweets",
+
+        "number": 117,
+        "media_key": "Likes",
+        "media_key_value": 507,
+        "likes": 507,
+        "percentage_likes": 553
       },
       {
         "id": "2",
@@ -34,10 +39,13 @@
         "user": "@realnathanf",
         "followers": "11k",
         "today": 1099,
-        "profile_Views": [
-            { "number": "52k", "percentage": 1375 },
-            { "likes": 5462, "percentage": 2257 }
-          ]
+        "keys": "Likes",
+
+        "number": 5462,
+        "media_key": "Profile Views",
+        "media_key_value": "52k",
+        "likes": 5462,
+        "percentage_likes": 2257
       },
       {
         "id": "3",
@@ -46,10 +54,13 @@
         "user": "Nathan F.",
         "followers": "8239",
         "today": -144,
-        "total_views": [
-            { "number": 1407, "percentage": 12 },
-            { "likes": 107, "percentage": -19 }
-          ]
+        "keys": "Likes",
+
+        "number": 107,
+        "media_key": "Total Views",
+        "media_key_value": 1407,
+        "likes": 107,
+        "percentage_likes": -19
       }
     ]
   }

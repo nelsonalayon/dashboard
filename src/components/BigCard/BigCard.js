@@ -21,7 +21,7 @@ const BigCard = (props) => {
 
   return props.data.social_media_dashboard.social_media.map((big) => {
     return (
-      <Container info={big}>
+      <Container info={big} key = {big.id} isDark = {props.isDark}>
         <User>
           <img src={photos[big.media]} alt={big.media} /> <h4>{big.user}</h4>
         </User>

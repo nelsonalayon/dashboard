@@ -24,8 +24,8 @@ const GlobalStyle = createGlobalStyle`
         // Dark Theme
 
         --background-dark: hsl(230, 17%, 14%);
-        --top-background-dark: hsl(232, 19%, 15%);
-        --background-card-dark: hsl(228, 28%, 20%);
+        --top-background-dark: #333a56;
+        --background-card-dark: #252b43;
         --text-blue-dark: hsl(228, 34%, 66%);
         --text-white-dark: hsl(0, 0%, 100%);
         --chart-dark: hsl(243, 51%, 70%);
@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
         // Light Theme
 
         --background-white: hsl(0, 0%, 100%);
-        --top-background-white: hsl(225, 100%, 98%);
+        --top-background-white: #e1e3f0;
         --background-card-white: hsl(227, 47%, 96%);
         --text-blue-white: hsl(228, 12%, 44%);
         --text-white-white: hsl(230, 17%, 14%);
@@ -44,15 +44,21 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: var(--background-dark);
-    font-family: 'Inter', sans-serif;
-    
+    background: ${props => props.isDark ? "var(--background-dark)" : "var(--background-white)" } ;
+    font-family: 'Inter', sans-serif;   
   }
 
   h1 {
     font-size: 40px;
     font-weight: 700;
-    color:white;
+    color: ${props => props.isDark ? "var(--text-white-dark)" : "var(--text-white-white)" };
+    margin:0;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: ${props => props.isDark ? "var(--text-white-dark)" : "var(--text-white-white)" };
     margin:0;
   }
 
@@ -62,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-blue-dark);
     letter-spacing: 4px;
     margin:0;
+    color: ${props => props.isDark ? "var(--text-white-dark)" : "var(--text-white-white)" };
   }
  
 `;
