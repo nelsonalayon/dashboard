@@ -9,6 +9,7 @@ import up from "../../assets/icon-up.svg";
 import down from "../../assets/icon-down.svg";
 import Modal from "../modal/Modal";
 
+
 const BigCard = (props) => {
   const [photos] = useState({
     1: facebook,
@@ -35,6 +36,7 @@ const BigCard = (props) => {
       >
         <User>
           <img src={photos[big.media]} alt={big.media} /> <h4>{big.user}</h4>
+          
         </User>
         <Followers>
           <h1>{big.followers}</h1>
@@ -45,7 +47,7 @@ const BigCard = (props) => {
           <h4>{Math.abs(big.today)} today</h4>
         </Today>
 
-        <Modal isOpen={openModal} data={big} isDark={props.isDark} />
+        <Modal isOpen={openModal} dataMedia={big} isDark={props.isDark} number = {2} />             
       </Container>
     );
   });

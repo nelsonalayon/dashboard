@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.button`
+    cursor:pointer;
     display:flex;
     flex-direction:column;
     justify-content:center;

@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import { useState } from "react";
 
+
 import {
   ModalBackground,
   ModalContainer,
@@ -38,6 +39,8 @@ const Modal = (props) => {
     5: up,
     6: down,
   });
+ 
+  
   const data = [
     {
       name: "4",
@@ -100,6 +103,8 @@ const Modal = (props) => {
       amt: 2100,
     },
   ];
+  
+  
 
   if (!props.isOpen) {
     return null;
@@ -108,15 +113,15 @@ const Modal = (props) => {
   return ReactDOM.createPortal(
     <ModalBackground>
       <ModalContainer isDark={props.isDark}>
-        <h2>{props.data.name} Followers</h2>
+        <h2>{props.name} {console.log(props.dataMedia)}Followers</h2>      
         <User>
-          <img src={photos[props.data.media]} alt={props.data.media} />{" "}
-          <h4>{props.data.user}</h4>
+          <img src={photos[props.dataMedia.media]} alt={props.dataMedia.media} />{" "}
+          <h4>{props.dataMedia.user}</h4>
         </User>
         <Resume>
           <Item>
             <div>
-              <h1>{props.data.followers}</h1>
+              <h1>{props.dataMedia.followers}</h1>
             </div>
             <div>
               <h4>
@@ -128,11 +133,11 @@ const Modal = (props) => {
           <Item>
             <div>
               <img
-                src={props.data.number_media_key > 0 ? photos[5] : photos[6]}
-                alt={props.data.number_media_key}
+                src={props.dataMedia.number_media_key > 0 ? photos[5] : photos[6]}
+                alt={props.dataMedia.number_media_key}
               />
-              <RegGreenText1 data={props.data.number_media_key}>
-                {Math.abs(props.data.number_media_key)}
+              <RegGreenText1 data={props.dataMedia.number_media_key}>
+                {Math.abs(props.dataMedia.number_media_key)}
               </RegGreenText1>
             </div>
             <div>
@@ -145,11 +150,11 @@ const Modal = (props) => {
           <Item>
             <div>
               <img
-                src={props.data.today > 0 ? photos[5] : photos[6]}
-                alt={props.data.today}
+                src={props.dataMedia.today > 0 ? photos[5] : photos[6]}
+                alt={props.dataMedia.today}
               />
-              <RegGreenText2 data={props.data.today}>
-                {Math.abs(props.data.today)}
+              <RegGreenText2 data={props.dataMedia.today}>
+                {Math.abs(props.dataMedia.today)}
               </RegGreenText2>
             </div>
             <h4>
@@ -171,7 +176,7 @@ const Modal = (props) => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis />
+              <XAxis name="days" />
               <YAxis />
               <Tooltip />
               <Legend />

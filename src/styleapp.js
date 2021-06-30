@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.article`
+
   display: flex;
   flex-direction: column;
   max-width: 1160px;
@@ -8,6 +9,7 @@ export const AppContainer = styled.article`
   padding-top: 40px;
 `;
 export const AppTitle = styled.div`
+
   display:flex;
   justify-content:space-between;
   padding-left: 14px;
@@ -42,11 +44,11 @@ export const SectionContainer = styled.section`
 `;
 
 export const Button = styled.button`
+cursor:pointer;
 position:relative;
 width: 55px;
 heigth: 15px;
 border-radius:20px;
-background: red;
 border:none;
 background: ${props => props.isDark ? "var(--toggle-dark);" : "var(--toggle-light);" } ;
 & div {
@@ -59,16 +61,15 @@ background: ${props => props.isDark ? "var(--toggle-dark);" : "var(--toggle-ligh
   left:${props => props.isDark ?  "5px" : "25px"};
   transition:1s;
 }
-
 @media (max-width: 580px) {    
   & div {
     top:2px;    
   }
 }
 
-
 `
 export const ButtonGroup = styled.div`
+
 display:flex;
 
 & h4 {

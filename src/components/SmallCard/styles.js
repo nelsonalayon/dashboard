@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SmallContainer = styled.button`
+    cursor:pointer;
     display:flex;  
     padding: 28px 0;     
     justify-content:space-around;

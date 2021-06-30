@@ -47,7 +47,7 @@ const SmallCard = (props) => {
                 src={obj.media_key_value > 0 ? photos[5] : photos[6]}
                 alt={obj.media}
               />
-              <Percentaje info={obj}> {Math.abs(obj.media_key_value)}</Percentaje>
+              <Percentaje info={obj}> {Math.abs(obj.media_key_value)}%</Percentaje>
             </PercentajeContainer>
           </div>
         </SmallContainer>
@@ -65,10 +65,10 @@ const SmallCard = (props) => {
                 src={obj.percentage_likes > 0 ? photos[5] : photos[6]}
                 alt={obj.percentage_likes}
               />{" "}
-              <Percentaje2 info={obj}> {Math.abs(obj.percentage_likes)}</Percentaje2>
+              <Percentaje2 info={obj}> {Math.abs(obj.percentage_likes)}%</Percentaje2>
             </PercentajeContainer>
           </div>
-          <Modal isOpen = {openModal} data = {obj} photo = {obj} isDark={props.isDark}/>
+          <Modal isOpen = {openModal} dataMedia = {obj} photo = {obj} isDark={props.isDark}/>
         </SmallContainer>
         
       </Fragment>
